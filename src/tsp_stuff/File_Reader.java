@@ -23,10 +23,10 @@ public class File_Reader {
         int n = 0;
         Scanner sc = new Scanner(file);
         while (sc.hasNextLine()) {
-        	n++;
             String i = sc.nextLine();
             String[] split = i.split(" ");
             if(split.length>1) {
+            	n++;
             	Node curr_Node = new Node();
             	curr_Node.setN(n);
             	curr_Node.setX(Integer.valueOf(split[0]));
@@ -35,7 +35,7 @@ public class File_Reader {
             }
         }
         Node firstNode = this.nodes.get(0);
-        System.out.print(firstNode.getX());
+       // System.out.print(firstNode.getX());
 	}
 
 	public ArrayList<Node> getNodes() {
