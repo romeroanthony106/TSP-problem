@@ -1,11 +1,13 @@
 package tsp_stuff;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Exhaustive_Algorithm {
 	private ArrayList<Node> nodes = new ArrayList<Node>();
 	private static ArrayList<Path> paths = new ArrayList<Path>();
 	private Path shortest = new Path();
+	private static Node first;
 
 	public void setNodes(ArrayList<Node> nodes) {
 		this.nodes = nodes;
@@ -13,6 +15,8 @@ public class Exhaustive_Algorithm {
 	
 	
 	private void generatePaths() {
+		first = nodes.get(0);
+		nodes.remove(0);
 		permute(this.nodes,0);
 		//System.out.print("Permutated");
 	}
@@ -25,8 +29,9 @@ public class Exhaustive_Algorithm {
 	        }
 	        if (k == arr.size() -1){
 	        	Path curr_Path = new Path();
+	        	curr_Path.addNode(first);
 	        	curr_Path.setFromArray(arr);
-	        	curr_Path.addNode(arr.get(0));
+	        	curr_Path.addNode(first);
 	        	paths.add(curr_Path);
 	        	//curr_Path.printPath();
 	            
