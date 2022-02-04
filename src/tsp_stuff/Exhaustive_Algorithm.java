@@ -26,6 +26,7 @@ public class Exhaustive_Algorithm {
 	        if (k == arr.size() -1){
 	        	Path curr_Path = new Path();
 	        	curr_Path.setFromArray(arr);
+	        	curr_Path.addNode(arr.get(0));
 	        	paths.add(curr_Path);
 	        	//curr_Path.printPath();
 	            

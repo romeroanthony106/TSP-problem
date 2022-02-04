@@ -14,11 +14,13 @@ public class Path {
 	public void printPath() {
 		int i = 0;
 		while(i < this.path.size()) {
-			System.out.print(this.path.get(i).getN());
+			System.out.print(this.path.get(i).getX());
 			System.out.print("\t");
+			System.out.print(this.path.get(i).getY());
+			System.out.print("\n");
 			i++;
 		}
-		System.out.print("\n");
+		
 	}
 	
 	public void setFromArray(List<Node> nodes) {
@@ -50,7 +52,7 @@ public class Path {
 	
 	public void printDistance() {
 		calculateDistance();
-		System.out.print(this.distance);
+		System.out.printf("%.3f",this.distance);
 		System.out.print("\n");
 	}
 

@@ -14,8 +14,8 @@ public class Main {
 		Exhaustive_Algorithm exhaustive = new Exhaustive_Algorithm();
 		exhaustive.setNodes(nodes);
 		Path shortest_Exhaustive = exhaustive.run();
-		shortest_Exhaustive.printPath();
 		shortest_Exhaustive.printDistance();
+		shortest_Exhaustive.printPath();
 	}
 
 	
