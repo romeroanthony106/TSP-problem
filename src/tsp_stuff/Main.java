@@ -8,10 +8,12 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		ArrayList<Node> nodes = new ArrayList<Node>();
 		ArrayList<Node> nodesCopy = new ArrayList<Node>();
-		// TODO Auto-generated method stub
-		//System.out.print("test");
-		File_Reader file_reader = new File_Reader();
-		nodes = file_reader.getNodes();
+		/*File_Reader file_reader = new File_Reader();
+		nodes = file_reader.getNodes();*/
+		
+		
+		Generate_Nodes randomNodes = new Generate_Nodes(100,100,10);
+		nodes = randomNodes.getNodes();
 		
 		nodesCopy = (ArrayList<Node>) nodes.clone();
 		System.out.print("Exhaustive \n");
