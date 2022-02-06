@@ -11,6 +11,9 @@ public class Exhaustive_Algorithm {
 
 	public void setNodes(ArrayList<Node> nodes) {
 		this.nodes = nodes;
+		this.paths.clear();
+		this.first = null;
+		this.shortest = null;
 	}
 	
 	
@@ -51,6 +54,7 @@ public class Exhaustive_Algorithm {
 		}
 	}
 	public Path run() {
+		this.paths.clear();
 		generatePaths();
 		findShortest();
 		return this.shortest;

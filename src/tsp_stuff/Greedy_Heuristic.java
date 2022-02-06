@@ -11,9 +11,13 @@ public class Greedy_Heuristic {
 
 	public void setNodes(ArrayList<Node> nodes) {
 		this.nodes = nodes;
+		this.visited.clear();
+		this.first = null;
+		
 	}
 	
 	public Path run() {
+		this.visited.clear();
 		this.first = this.nodes.get(0);
 		this.visited.add(first);
 		Node Next = null;
